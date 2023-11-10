@@ -14,19 +14,19 @@ class Player {
 
   void display() {
     fill(255, 0, 0);
-    rect(xpos, ypos, 5, 5);
+    rect(xpos, ypos, 75, 75);
   }
 
   void move() {
     if (keyPressed) {
       if (key == 'w') {
-        ypos--;
+        ypos-=3;
       } else if (key == 's') {
-        ypos++;
+        ypos+=3;
       } else if (key == 'a') {
-        xpos--;
+        xpos-=3;
       } else if (key == 'd') {
-        xpos++;
+        xpos+=3;
       }
     }
   }
