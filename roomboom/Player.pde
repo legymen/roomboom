@@ -1,9 +1,18 @@
 class Player {
   float xpos, ypos;
 
-  Player() {
+  int health;
+
+  ArrayList<Object> inventory;
+
+  Player(){
+
     xpos = width/2;
     ypos = height/2;
+
+    inventory = new ArrayList<Object>;
+
+    health = 5;
   }
 
   void update() {
