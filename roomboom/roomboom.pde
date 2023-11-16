@@ -2,9 +2,6 @@ Player player;
 
 Room[][] roomGrid;
 
-int[] = ROOM_GEOMETRY = {400, 100, 50};  // {left spacing, border spacing, wall thickness}
-}
-
 int cols = 100; // Number of colums in the house
 int rows = 100; // Number om rows in the house
 
