@@ -2,8 +2,8 @@ Player player;
 
 Room[][] roomGrid;
 
-int cols = 100; // Number of colums in the house
-int rows = 100; // Number om rows in the house
+int cols = 20; // Number of colums in the house
+int rows = 20; // Number om rows in the house
 
 int[] currentRoom = new int[2]; 
 
@@ -30,7 +30,5 @@ void draw() {
   
   // Update all rooms
   roomGrid[currentRoom[0]][currentRoom[1]].update();
-  
-  // Update the player
-  player.update();
+
 }
