@@ -2,8 +2,11 @@ Player player;
 
 Room[][] roomGrid;
 
-int cols = 20; // Number of colums in the house
-int rows = 20; // Number om rows in the house
+String[] roomTypes = { "empty", "trap", "monster", "item" };
+String[] objectTypes = { "health potion", "key", "amulette", "aa", "bb", "cc", "dd", "ee"};
+
+int cols = 20; // Number of colums in the castle
+int rows = 20; // Number om rows in the castle
 
 int[] currentRoom = new int[2]; 
 
