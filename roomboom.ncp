@@ -7,14 +7,13 @@
       <Entity type="Class">
         <Name>Player</Name>
         <Access>Public</Access>
-        <Location left="482" top="285" />
+        <Location left="484" top="285" />
         <Size width="221" height="315" />
         <Collapsed>False</Collapsed>
         <Member type="Field">private int HP</Member>
         <Member type="Field">private int maxHP</Member>
         <Member type="Field">private float xpos</Member>
         <Member type="Field">private float ypos</Member>
-        <Member type="Field">private int newField</Member>
         <Member type="Field">private ArrayList&lt;Object&gt; inventory</Member>
         <Member type="Constructor">public Player()</Member>
         <Member type="Method">public void update()</Member>
