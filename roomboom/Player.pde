@@ -1,7 +1,8 @@
 class Player {
   float xpos, ypos;
 
-  int health;
+  int HP;
+  int maxHP;
 
   ArrayList<Object> inventory;
 
@@ -12,7 +13,8 @@ class Player {
 
     inventory = new ArrayList<Object>;
 
-    health = 5;
+    HP = 3;
+    maxHP = 3;
   }
 
   void update() {
