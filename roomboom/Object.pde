@@ -1,13 +1,13 @@
 class Object{
     
     String description;
-    String[] types = { "health potion", "key", "amulette"};
+   
     String type;
     
     
-    Object() {
+    Object(String _type) {
         
-        
+        type = _type;
         
     }
     
