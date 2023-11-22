@@ -1,0 +1,9 @@
+**Room dimensions**
+
+256x256 PIX
+800x800 pixels
+
+corner to door: 100 PIX
+
+
+
