@@ -15,7 +15,8 @@ class Room {
         type = randomType();
 
         if (type == "item") {
-            object = randomObject();
+            // object = randomObject();
+            object = new Object("potion");
         } else {
             object = null;
         }
@@ -37,6 +38,10 @@ class Room {
             + "  Rum: " + str(thisRoom[0]) + ", " + str(thisRoom[1]), 50, 50);
         if (object != null){
             text("Objekt: " + object.type, 50, 70);
+        }
+
+        if (object != null){
+            object.display();
         }
          
     }
