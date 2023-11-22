@@ -2,13 +2,15 @@ Player player;
 
 Room[][] roomGrid;
 
+int[] currentRoom = new int[2];
+
 String[] roomTypes = { "empty", "trap", "monster", "item" };
 String[] objectTypes = { "health potion", "key", "amulette", "aa", "bb", "cc", "dd", "ee"};
 
 int cols = 20; // Number of colums in the castle
 int rows = 20; // Number om rows in the castle
 
-int[] currentRoom = new int[2]; 
+
 
 void setup() {
   fullScreen();
@@ -31,7 +33,7 @@ void setup() {
 
 void draw() {
   
-  // Update all rooms
+  // Update current room
   roomGrid[currentRoom[0]][currentRoom[1]].update();
 
 }
