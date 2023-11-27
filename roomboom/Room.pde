@@ -2,11 +2,11 @@ class Room {
 
   String type;
 
-  Object object;
+  Item item;
 
   int[] thisRoom = new int[2];
 
-  //PImage floorPlan;
+  PImage floorPlan;
 
   Room(int[] _thisRoom) {
 
@@ -15,11 +15,14 @@ class Room {
     type = randomType();
 
     if (type == "item") {
-      // object = randomObject();
-      object = new Object("potion");
+      // item = randomItem();
+      item = new Item("potion");
     } else {
-      object = null;
+      item = null;
     }
+
+    floorPlan = loadImage("data/room1_800.png");
+
   }
 
   void update() {
@@ -29,17 +32,17 @@ class Room {
   }
 
   void display() {
-    background(100);
+    image(floorPlan, 0, 0);
     fill(255, 255, 0);
     textSize(10);
-    text("Typ: " + type
-      + "  Rum: " + str(thisRoom[0]) + ", " + str(thisRoom[1]), 50, 50);
-    if (object != null) {
-      text("Objekt: " + object.type, 50, 70);
+    text("Type: " + type
+      + "  Room: " + str(thisRoom[0]) + ", " + str(thisRoom[1]), 50, 50);
+    if (item != null) {
+      text("Item: " + item.type, 50, 70);
     }
 
-    if (object != null) {
-      object.display();
+    if (item != null) {
+      item.display();
     }
   }
 
@@ -48,9 +51,9 @@ class Room {
     return roomTypes[index];
   }
 
-  Object randomObject() {
-    int index = int(random(objectTypes.length));
-    Object obj = new Object(objectTypes[index]);
-    return obj;
+  Object randomItem() {
+    int index = int(random(itemTypes.length));
+    Object it = new Item(itemTypes[index]);
+    return it;
   }
 }

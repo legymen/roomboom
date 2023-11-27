@@ -4,14 +4,14 @@ class Player {
   int HP;
   int maxHP;
 
-  ArrayList<Object> inventory;
+  ArrayList<Item> inventory;
 
   Player() {
 
     xpos = width / 2;
     ypos = height / 2;
 
-    inventory = new ArrayList<Object>();
+    inventory = new ArrayList<Item>();
 
     HP = 3;
     maxHP = 3;
@@ -30,16 +30,16 @@ class Player {
 
   void move() {
 
-    if (pressedKeys.get("w")) {
+    if (pressedKeys.get('w')) {
       ypos -=3;
     }
-    if (pressedKeys.get("s")) {
+    if (pressedKeys.get('s')) {
       ypos +=3;
     }
-    if (pressedKeys.get("a")) {
+    if (pressedKeys.get('a')) {
       xpos -=3;
     }
-    if (pressedKeys.get("d")) {
+    if (pressedKeys.get('d')) {
       xpos +=3;
     }
   }
@@ -76,11 +76,11 @@ class Player {
     }
   }
 
-  void addToInventory(Object obj) {
-    inventory.add(obj);
+  void addToInventory(Item it) {
+    inventory.add(it);
   }
 
-  ArrayList<Object> getInventory() {
+  ArrayList<Item> getInventory() {
     return inventory;
   }
 
