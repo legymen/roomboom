@@ -3,6 +3,8 @@ class Player {
 
   int HP;
   int maxHP;
+  
+  int gold;
 
   ArrayList<Item> inventory;
 
@@ -25,6 +27,7 @@ class Player {
 
   void display() {
     fill(255, 0, 0);
+    rectMode(CENTER);
     rect(xpos, ypos, 75, 75);
   }
 
