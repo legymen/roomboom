@@ -27,9 +27,9 @@ class GUI {
     for (Item it : player.inventory) {
       int i = player.inventory.indexOf(it)+1;
       if (i <= 8)
-        image(it.img, (slotSize*i)+(i*5)-10, 125);
+        image(it.img, (slotSize*i)+(i*5), 125);
       else if (i > 8 && i <= 16)
-        image(it.img, (slotSize*(i-8))+((i-8)*10)-20, 175);
+        image(it.img, (slotSize*(i-8))+((i-8)*10), 175);
     }
     fill(255, 0, 0);
     rect(25, 80, 100, 25);

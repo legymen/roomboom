@@ -2,6 +2,8 @@ HashMap<Character, Boolean> pressedKeys; // Hashmap for keeping track of pressed
 
 Player player; 
 
+GUI gui;
+
 Room[][] roomGrid; // A 2x2 array for all room objects
 
 int[] currentRoom = new int[2]; // An array of length 2 for the column and row of the current room
@@ -19,6 +21,7 @@ void setup() {
     //fullScreen();
     size(800, 800);
     
+    gui = new GUI();
     //Create the pressedKeys hashmap
     pressedKeys = new HashMap<Character, Boolean>();
     //Keys that are used are set to false
@@ -46,6 +49,7 @@ void setup() {
 void draw() {
     //Update current room
     roomGrid[currentRoom[0]][currentRoom[1]].update();
+    gui.update();
 }
 
 void keyPressed() {
