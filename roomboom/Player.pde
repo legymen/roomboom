@@ -9,12 +9,16 @@ class Player {
 
   ArrayList<Item> inventory;
 
+  PImage img;
+
   Player() {
 
     xpos = width / 2;
     ypos = height / 2;
 
     inventory = new ArrayList<Item>();
+
+    img = loadImage("data/Zilda_top.png");
 
     HP = 3;
     maxHP = 5;
@@ -32,9 +36,8 @@ class Player {
   }
 
   void display() {
-    fill(255, 0, 0);
-    rectMode(CENTER);
-    rect(xpos, ypos, 75, 75);
+    imageMode(CENTER);
+    image(img, xpos, ypos);
   }
 
   void move() {

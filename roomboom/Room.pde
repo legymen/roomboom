@@ -31,7 +31,8 @@ class Room {
   }
 
   void display() {
-    image(floorPlan, 0, 0);
+    // image(floorPlan, 0, 0);
+    background(200);
     fill(255, 255, 0);
     textSize(10);
     text("Type: " + type

@@ -7,8 +7,8 @@ class Item {
   Item(String _type) {
     type = _type;
     img = loadImage("data/health_potion.png");
-    xpos = width/2;
-    ypos = height/2;
+    xpos = int(random(50,width-50));
+    ypos = int(random(50, height-50));
   }
 
   void display() {
