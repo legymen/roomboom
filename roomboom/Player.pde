@@ -3,6 +3,7 @@ class Player {
 
   int HP;
   int maxHP;
+  int maxHPcap;
   
   int gold;
 
@@ -16,11 +17,16 @@ class Player {
     inventory = new ArrayList<Item>();
 
     HP = 3;
-    maxHP = 3;
+    maxHP = 5;
+    maxHPcap = 10;
+
+    gold = 0;
+
   }
 
   void update() {
     move();
+    findItem();
     leaveRoom();
     display();
   }
@@ -44,6 +50,17 @@ class Player {
     }
     if (pressedKeys.get('d')) {
       xpos +=3;
+    }
+  }
+
+  void findItem(){
+    if (roomGrid[currentRoom[0]][currentRoom[1]].item != null){
+      Item it = roomGrid[currentRoom[0]][currentRoom[1]].item;
+      if (dist(xpos, ypos, it.xpos, it.ypos) < 20){
+        addToInventory(it);
+        roomGrid[currentRoom[0]][currentRoom[1]].item = null;
+        background(0);
+      }
     }
   }
 

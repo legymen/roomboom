@@ -15,8 +15,7 @@ class Room {
     type = randomType();
 
     if (type == "item") {
-      // item = randomItem();
-      item = new Item("potion");
+      item = randomItem();
     } else {
       item = null;
     }
@@ -51,9 +50,9 @@ class Room {
     return roomTypes[index];
   }
 
-  Object randomItem() {
+  Item randomItem() {
     int index = int(random(itemTypes.length));
-    Object it = new Item(itemTypes[index]);
+    Item it = new Item(itemTypes[index]);
     return it;
   }
 }
