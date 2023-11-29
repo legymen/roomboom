@@ -1,25 +1,34 @@
+int GUI_WIDTH = 400;
+int ROOM_WIDTH = 700;
+int COLS = 20; // Number of colums in the castle
+int ROWS = 20; // Number om rows in the castle
+
+String POTION_IMAGE = "data/health_potion.png";
+String KEY_IMAGE = "data/golden_key.png";
+
+
+
 HashMap<Character, Boolean> pressedKeys; // Hashmap for keeping track of pressed keys
 
 Player player; 
 
 GUI gui;
 
-Room[][] roomGrid; // A 2x2 array for all room objects
+Room[][] roomGrid; // A 2-dim array for all room objects
 
 int[] currentRoom = new int[2]; // An array of length 2 for the column and row of the current room
 
 // Arrays for the various types of rooms and items
-String[] roomTypes = { "empty", "trap", "monster", "item" };
-String[] itemTypes = { "potion", "key", "amulette"};
+String[] roomTypes = { "empty", "trap", "item" };
+String[] itemTypes = { "potion", "key"};
 
-int cols = 20; // Number of colums in the castle
-int rows = 20; // Number om rows in the castle
+
 
 
 
 void setup() {
-    //fullScreen();
-    size(800, 800);
+    fullScreen();
+    // size(1210, 800);
     
     gui = new GUI();
     //Create the pressedKeys hashmap
@@ -34,7 +43,7 @@ void setup() {
     player = new Player();
     
     //Create the 2-dim array of rooms
-    roomGrid = new Room[cols][rows];
+    roomGrid = new Room[COLS][ROWS];
     
     //Set the starting room coordinates
     currentRoom[0] = 0;
@@ -48,7 +57,10 @@ void setup() {
 
 void draw() {
     //Update current room
+    background(180);
+
     roomGrid[currentRoom[0]][currentRoom[1]].update();
+
     gui.update();
 }
 
