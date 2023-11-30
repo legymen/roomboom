@@ -4,6 +4,7 @@ class Player {
   int HP;
   int maxHP;
   int maxHPcap;
+  int maxInv;
   
   int gold;
 
@@ -23,6 +24,7 @@ class Player {
     HP = 3;
     maxHP = 5;
     maxHPcap = 10;
+    maxInv = 12;
 
     gold = 0;
 
