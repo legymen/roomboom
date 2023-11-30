@@ -36,7 +36,7 @@ class Room {
     fill(255, 255, 0);
     textSize(10);
     text("Type: " + type
-      + "  Room: " + str(thisRoom[0]) + ", " + str(thisRoom[1]), 50, 50);
+      + "  Room: " + str(thisRoom[0]) + ", " + str(thisRoom[1]), width-125, 50);
     if (item != null) {
       text("Item: " + item.type, 50, 70);
     }

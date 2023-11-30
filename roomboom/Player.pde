@@ -4,6 +4,7 @@ class Player {
   int HP;
   int maxHP;
   int maxHPcap;
+  int maxInv;
   
   int gold;
 
@@ -19,7 +20,8 @@ class Player {
     inventory = new ArrayList<Item>();
 
     img = loadImage("data/Zilda_top.png");
-
+    
+    maxInv = 20;
     HP = 3;
     maxHP = 5;
     maxHPcap = 10;
@@ -59,7 +61,7 @@ class Player {
   void findItem(){
     if (roomGrid[currentRoom[0]][currentRoom[1]].item != null){
       Item it = roomGrid[currentRoom[0]][currentRoom[1]].item;
-      if (dist(xpos, ypos, it.xpos, it.ypos) < 20){
+      if (dist(xpos, ypos, it.xpos, it.ypos) < 20 && inventory.size() < maxInv){
         addToInventory(it);
         roomGrid[currentRoom[0]][currentRoom[1]].item = null;
         background(0);

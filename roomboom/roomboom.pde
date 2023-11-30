@@ -9,7 +9,7 @@ Room[][] roomGrid; // A 2x2 array for all room objects
 int[] currentRoom = new int[2]; // An array of length 2 for the column and row of the current room
 
 // Arrays for the various types of rooms and items
-String[] roomTypes = { "empty", "trap", "monster", "item" };
+String[] roomTypes = { "item" }; //"empty", "trap", "monster", 
 String[] itemTypes = { "potion", "key", "amulette"};
 
 int cols = 20; // Number of colums in the castle
