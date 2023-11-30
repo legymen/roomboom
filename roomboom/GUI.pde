@@ -1,4 +1,5 @@
 class GUI {
+  
   float heartSize = 40;
   float slotSize = 50;
   
