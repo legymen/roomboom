@@ -1,14 +1,19 @@
 class Item {
-  String description;
+  // String description;
   String type;
   float xpos, ypos;
   PImage img;
 
   Item(String _type) {
     type = _type;
-    img = loadImage("data/health_potion.png");
-    xpos = int(random(50,width-50));
-    ypos = int(random(50, height-50));
+
+    if (type == "potion"){
+      img = loadImage(POTION_IMAGE);
+    } else if (type == "key"){
+      img = loadImage(KEY_IMAGE) ;
+    }
+    xpos = int(random(50,ROOM_WIDTH-50));
+    ypos = int(random(50, ROOM_WIDTH-50));
   }
 
   void display() {

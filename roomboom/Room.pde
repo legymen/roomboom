@@ -25,14 +25,20 @@ class Room {
   }
 
   void update() {
-    display();
+    pushMatrix();
+    translate(width - ROOM_WIDTH - 5, 0);
 
+    display();
     player.update();
+
+    popMatrix();
   }
 
   void display() {
     // image(floorPlan, 0, 0);
-    background(200);
+    fill(100);
+    rect(0,5,ROOM_WIDTH, ROOM_WIDTH, 5);
+
     fill(255, 255, 0);
     textSize(10);
     text("Type: " + type
