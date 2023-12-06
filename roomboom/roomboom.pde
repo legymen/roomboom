@@ -19,7 +19,7 @@ Room[][] roomGrid; // A 2-dim array for all room objects
 int[] currentRoom = new int[2]; // An array of length 2 for the column and row of the current room
 
 // Arrays for the various types of rooms and items
-String[] roomTypes = { "empty", "trap", "item" };
+String[] roomTypes = { "empty", "dragon", "enemy", "item" };
 String[] itemTypes = { "potion", "key"};
 
 

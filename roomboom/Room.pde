@@ -3,6 +3,8 @@ class Room {
   String type;
 
   Item item;
+  Dragon dragon;
+  Enemy enemy;
 
   int[] thisRoom = new int[2];
 
@@ -20,29 +22,44 @@ class Room {
       item = null;
     }
 
+    if (type = "dragon"){
+      dragon = new Dragon();
+    } else {
+      dragon = null;
+    }
+
+     if (type = "enemy"){
+      enemy = new Enemy();
+    } else {
+      enemy = null;
+    }
+
     floorPlan = loadImage("data/room1_800.png");
 
   }
 
   void update() {
-    pushMatrix();
-    translate(width - ROOM_WIDTH - 5, 0);
-
     display();
-    player.update();
 
-    popMatrix();
+    if (type = "dragon"){
+      dragon.update();
+      
+    } else if (type = "enemy"){
+      enemy.update();
+    }
+
+
+    player.update();
   }
 
   void display() {
     // image(floorPlan, 0, 0);
-    fill(100);
-    rect(0,5,ROOM_WIDTH, ROOM_WIDTH, 5);
-
+    background(200);
     fill(255, 255, 0);
     textSize(10);
+    
     text("Type: " + type
-      + "  Room: " + str(thisRoom[0]) + ", " + str(thisRoom[1]), width-125, 50);
+      + "  Room: " + str(thisRoom[0]) + ", " + str(thisRoom[1]), 50, 50);
     if (item != null) {
       text("Item: " + item.type, 50, 70);
     }
