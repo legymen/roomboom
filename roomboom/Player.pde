@@ -6,6 +6,8 @@ class Player {
   int maxHPcap;
   int maxInv;
   
+  String fun = "Have fun";
+  
   int gold;
 
   ArrayList<Item> inventory;
